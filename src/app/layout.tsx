@@ -16,15 +16,17 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={` text-slate-700 ${inter.className}`}>
-        <div className="w-full min-h-screen relative">
-          <header className="fixed h-24 border-b-[1px] border-slate-300 bg-white w-full">
+      <body className={`min-h-screen text-slate-700 bg-slate-100 ${inter.className}`}>
+        <div className="w-full min-h-screen h-full relative bg-slate-100">
+          <header className="fixed h-24 border-b-[1px] border-slate-300 w-full bg-white z-10">
             <div className="max-w-7xl w-full h-full mx-auto">
-              header
+              <div className="flex items-center h-full">
+                <h1 className="text-5xl">Tools that Support My Online Articles</h1>
+            </div>
             </div>
           </header>
-          <main className="w-full h-full mb-10">
-            <div className="max-w-7xl w-full pt-32 mx-auto">
+          <main className="w-full h-full bg-white">
+            <div className="max-w-7xl w-full pt-32 pb-10 mx-auto">
               {children}
             </div>
           </main>

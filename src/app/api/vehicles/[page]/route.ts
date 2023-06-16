@@ -7,7 +7,7 @@ export const GET = async (request: Request, {params} : {
     params: { page: number }
 }) => {
 
-    const RECORD_LENGTH = 20;
+    const RECORD_LENGTH = 100;
 
     const data: IVehicleMakeModel = MakeModelData;
     const data_size: number = data.results?.length;
