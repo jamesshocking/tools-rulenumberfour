@@ -3,6 +3,7 @@
 import useSWR, { Fetcher } from "swr";
 import React, { useState } from "react";
 import { IVehicleMakeModel, IVehicle } from "@/interface/vehicle";
+import Image from "next/image";
 
 const getVehicleRecords = async (page: string): Promise<IVehicleMakeModel> => {
   const url = `/api/vehicles/${page}/`;
@@ -106,7 +107,7 @@ const HomePage = () => {
               <div className="flex flex-row space-x-2">
                 <img src="/images/social/medium.svg" className="w-6 h-6" /><a href="https://medium.com/geekculture/how-to-execute-a-rest-api-call-on-apache-spark-the-right-way-in-python-4367f2740e78" className="underline-offset-2 underline" target="_blank">Read the arcticle on Medium.com</a>
               </div>
-              <p>The article is supported by a simple REST based web service that can be used for trying out the example code.  The data is sourced from the US Government at <a href="https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json" className="underline underline-offset-2" target="_blank">https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json</a></p>
+              <p>This simple REST based web service is designed for use with the example code in the article on medium.com.  The data is sourced from the US Government at <a href="https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json" className="underline underline-offset-2" target="_blank">https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json</a></p>
               <p>The web service can be accessed via the following URL:</p>
               <code className="bg-slate-200 px-10 py-5">
               https://tools.rulenumberfour.co.uk/api/vehicles/[page]<br /><br/>
@@ -123,7 +124,7 @@ const HomePage = () => {
                 <li>maxRecords is the total number of results in the dataset.  I.e. maxResults/100 = total pages</li>
               </ul>
               <h3 className="text-xl">Example REST API Response</h3>
-              <iframe src="http://localhost:3000/api/vehicles/1" className="h-48 w-full border-[1px] border-slate-300">
+              <iframe src="/api/vehicles/1" className="h-48 w-full border-[1px] border-slate-300">
 
               </iframe>
             </article>
@@ -132,7 +133,7 @@ const HomePage = () => {
         </div>
         <div className="flex-none w-1/3">
           <div className="border-[1px] border-slate-300 rounded-xl relative bg-white mt-10">
-              <img src="/images/jhocking.jpg" className="absolute w-32 h-32 ml-64 -mt-10 rounded-full border-[2px] border-slate-300" />
+              <Image src="/images/jhocking.jpg" className="absolute w-32 h-32 ml-64 -mt-10 rounded-full border-[2px] border-slate-300" width="128" height="128" alt="James Hocking" />
               <div className="px-10 pb-10 pt-10 space-y-5">
                   <h2 className="text-2xl font-bold">James Hocking</h2>
                   <ul className="flex flex-col space-y-2">
