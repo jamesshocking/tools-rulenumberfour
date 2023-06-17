@@ -98,7 +98,7 @@ const HomePageOld = () => {
 const HomePage = () => {
   return (
     <div className="w-full h-full">
-      <div className="flex flex-row space-x-4">
+      <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-4">
         <div className="flex-grow">
 
           <section>
@@ -110,11 +110,13 @@ const HomePage = () => {
               <p>This simple REST based web service is designed for use with the example code in the article on medium.com.  The data is sourced from the US Government at <a href="https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json" className="underline underline-offset-2" target="_blank">https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json</a></p>
               <p>The web service can be accessed via the following URL:</p>
               <code className="bg-slate-200 px-10 py-5">
-              https://tools.rulenumberfour.co.uk/api/vehicles/[page]<br /><br/>
+              https://tools.rulenumberfour.
+              co.uk/api/vehicles/[page]<br /><br/>
 
               E.g.
 
-              https://tools.rulenumberfour.co.uk/api/vehicles/1 
+              https://tools.rulenumberfour.
+              co.uk/api/vehicles/1 
               </code>
               <p>The web service accepts a single parameter via the URL itself and that is the page number itself.  It will return a maximum of 100 records per page along-with a HTTP Status Code of 200 on success.</p>
               <p>On error, (i.e. invalid page number) a status code of 405 will be returned.</p>
@@ -131,7 +133,7 @@ const HomePage = () => {
           </section>
 
         </div>
-        <div className="flex-none w-1/3">
+        <div className="flex-none md:w-1/3 w-full">
           <div className="border-[1px] border-slate-300 rounded-xl relative bg-white mt-10">
               <Image src="/images/jhocking.jpg" className="absolute w-32 h-32 ml-64 -mt-10 rounded-full border-[2px] border-slate-300" width="128" height="128" alt="James Hocking" />
               <div className="px-10 pb-10 pt-10 space-y-5">
